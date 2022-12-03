@@ -17,6 +17,10 @@ def main(input_file):
             pool = list(sorted(pool, reverse=True)[:POOL_SIZE])
             current = 0
 
+    if current:
+        pool.append(current)
+        pool = list(sorted(pool, reverse=True)[:POOL_SIZE])
+
     print(sum(pool))
 
 

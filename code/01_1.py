@@ -14,6 +14,9 @@ def main(input_file):
             max_calories = max(max_calories, current)
             current = 0
 
+    if current:
+        max_calories = max(max_calories, current)
+
     print(max_calories)
 
 
