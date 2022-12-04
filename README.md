@@ -15,6 +15,6 @@ pip install -r requirements.txt
 ```bash
 source init_next_problem.sh
 
-# creates 01_1.txt and 01_2.txt for input and 01_1.py, 01_2.py for code
+# creates 01.txt for input and 01_1.py, 01_2.py for code
 # automatically increases day number by checking existing files
 ```
