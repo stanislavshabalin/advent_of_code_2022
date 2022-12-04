@@ -8,7 +8,7 @@
 
 	"settings": {
 		"folder_exclude_patterns": [".env/"],
-		"sublack.black_line_length": 100,
+		"sublack.black_line_length": 80,
 		"sublack.black_command": "~/src/.envs/advent_of_code/bin/black",
 		"sublack.black_on_save": true,
 		"sublack.black_use_precommit": true,
