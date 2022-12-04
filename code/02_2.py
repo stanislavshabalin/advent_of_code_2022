@@ -66,6 +66,6 @@ def main(input_file):
 
 
 if __name__ == "__main__":
-    file_path = os.path.join(os.path.dirname(__file__), "02_1.txt")
+    file_path = os.path.join(os.path.dirname(__file__), "02.txt")
     with open(file_path, "r") as input_file:
         main(input_file)

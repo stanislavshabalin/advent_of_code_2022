@@ -2,6 +2,9 @@ import os
 
 
 def main(input_file):
+    for line in input_file:
+        pass
+
     print(42)
 
 
