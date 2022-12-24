@@ -9,7 +9,7 @@ class LineOfSight:
         self.current_height = None
 
     def is_visible(self, height: int) -> bool:
-        if not self.current_height:
+        if self.current_height is None:
             self.current_height = height
             return True
 
@@ -115,6 +115,18 @@ def main(input_file):
             "515627",
             (True, False, False, True, False, True),
         ),
+        (
+            "5123665271",
+            (True, False, False, False, True, False, False, False, True, False),
+        ),
+        (
+            "3037053",
+            (True, False, False, True, False, False, False),
+        ),
+        (
+            "00042",
+            (True, False, False, True, False),
+        ),
     ),
 )
 def test_line_of_sight(tree_vector, expected_sights):
@@ -167,6 +179,102 @@ def test_line_of_sight(tree_vector, expected_sights):
             10001
             11101
             11111
+            """,
+        ),
+        (
+            """
+            55555
+            51115
+            51115
+            51115
+            55555
+            """,
+            """
+            11111
+            10001
+            10001
+            10001
+            11111
+            """,
+        ),
+        (
+            """
+            55555
+            51115
+            51715
+            51115
+            55555
+            """,
+            """
+            11111
+            10001
+            10101
+            10001
+            11111
+            """,
+        ),
+        (
+            """
+            4444
+            1111
+            2222
+            1111
+            """,
+            """
+            1111
+            1001
+            1111
+            1111
+            """,
+        ),
+        (
+            """
+            9
+            """,
+            """
+            1
+            """,
+        ),
+        (
+            """
+            55
+            55
+            """,
+            """
+            11
+            11
+            """,
+        ),
+        (
+            """
+            9876
+            8765
+            7654
+            6543
+            """,
+            """
+            1111
+            1111
+            1111
+            1111
+            """,
+        ),
+        (
+            """
+            552255
+            545545
+            611116
+            611116
+            545545
+            551144
+            """,
+            """
+            111111
+            101101
+            100001
+            100001
+            101101
+            111111
             """,
         ),
     ),
