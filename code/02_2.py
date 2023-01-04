@@ -31,9 +31,7 @@ def calc_score(a, outcome):
 
     game = next(
         filter(
-            lambda dict_item: (
-                dict_item[0][0] == a and outcome == dict_item[1]
-            ),
+            lambda dict_item: (dict_item[0][0] == a and outcome == dict_item[1]),
             rules.items(),
         )
     )

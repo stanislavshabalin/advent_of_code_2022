@@ -131,9 +131,7 @@ def main(input_file):
 )
 def test_line_of_sight(tree_vector, expected_sights):
     los = LineOfSight()
-    result = tuple(
-        los.is_visible(int(tree_height)) for tree_height in tree_vector
-    )
+    result = tuple(los.is_visible(int(tree_height)) for tree_height in tree_vector)
 
     assert result == expected_sights
 

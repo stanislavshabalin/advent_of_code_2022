@@ -61,9 +61,7 @@ class FileNode:
     def __str__(self):
         basic_name = f"{self.name} {self.size} {self.node_type}"
         if self.children:
-            appendix = " [{}]".format(
-                ", ".join(str(child) for child in self._children)
-            )
+            appendix = " [{}]".format(", ".join(str(child) for child in self._children))
             basic_name += appendix
 
         return basic_name
